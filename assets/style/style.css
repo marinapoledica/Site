@@ -1,0 +1,614 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+*{
+    font-family: 'Amatic SC', cursive;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*od 750px preko*/
+
+.wrapper {
+    height: 93px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+header {
+    display: block;
+    height: 92px;
+    background-color: white;
+    width: 85%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+}
+
+header .logo, 
+.menuMobile .logo {
+    height: 93px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+header img,
+.menuMobile img {
+    height: 93px;
+    padding-bottom: 5px;
+}
+
+header .links {
+    float: right;
+    margin-right: 20px;
+}
+
+.links a {
+    float: left;
+    display: block;
+    height: 93px;
+    line-height: 93px;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 25px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.links a:hover,
+.links a:active,
+.links a:focus {
+    color: rgb(255, 0, 149);
+}
+
+.links svg {
+    position: relative;
+    top: 32px;
+}
+
+.menuMobile {
+    width: 100%;
+    padding: 6px 20px;
+    background: white;
+    text-align: right;
+    color: #333;
+    font-size: 45px;
+    display: none;
+}
+
+
+@media only screen and (max-width: 750px){
+    .menuMobile {
+        display: block;
+    }
+    
+    .menuMobile a:hover,
+    .menuMobile a:active,
+    .menuMobile a:focus {
+        color: rgb(255, 0, 149);
+    } 
+
+    .menu-mobile-icon svg {
+        margin-top: 15px;
+    }
+
+    .menuMobile a {
+        color: #333;
+        margin-right: 45px;
+    }
+
+    .menuMobile a:visited {
+        color: #333;
+    }
+
+    header .links {
+        width: 100%;
+        margin-right: 0;
+        border-top-style: groove;
+    }
+
+    .links a {
+        display: block;
+        text-align: center;
+        float: none;
+        height: 89px;
+        line-height: 89px;
+        margin-right: 0;
+    }
+
+    header {
+        width: 100%;
+        height: 625px;
+        display: none;
+    }
+
+    header .logo {
+        display: none;
+    }
+
+    .menuMobile .logo {
+        height: 80px;
+    }
+
+    .menuMobile img {
+        height: 80px;
+    }
+}
+
+.picture-one {
+    width: 100%;
+} 
+
+.welcome {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+.welcome h1 {
+    color: #333;
+    font-weight: 700px;
+    background: url(../pictures/title-background-1.jpg);
+    color: rgb(255, 0, 149);
+}
+
+.welcome p {
+    font-family: 'Kavivanar', cursive;
+    color: #333;
+}
+
+/*preko 1020px*/
+@media only screen and (min-width: 1020px) {
+    .about {
+        width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    
+    .about-picture {
+        text-align: center;
+    }
+    
+    .about-picture img {
+        width: 450px;
+        padding: 35px;
+    }
+
+    .about-text {
+        text-align: justify;
+        padding: 35px;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .about {
+        width: 60%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    
+    .about-picture {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    
+    .about-picture img {
+        width: 90%;
+    }
+
+    .about-text {
+        text-align: justify;
+    }
+}
+
+.about-text h1 {
+    color: rgb(255, 0, 149);
+}
+
+.about-text p {
+    font-family: 'Kavivanar', cursive;
+    color: #333;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+}
+
+footer a {
+    font-size: 55px;
+    text-decoration: none;
+    color: #333; 
+}
+
+footer a:hover,
+footer a:active,
+footer a:focus {
+    color: rgb(255, 0, 149);
+}
+
+footer a svg {
+    margin: 10px;
+}
+
+footer div a {
+    font-size: 40px;
+}
+
+@media only screen and (min-width: 1045px) {
+    .classes {
+        width: 1024px;
+        height: 549px;
+        background: url(../pictures/grupni-casovi.jpg) center center no-repeat;
+        background-size: 1024px 549px;
+    } 
+
+    .back {
+        width: 450px;
+        margin: 0 auto;
+        opacity: 0.8;
+    }
+
+    .back a {
+        font-size: 35;
+    }
+}
+
+@media only screen and (max-width: 1045px) {
+    .classes {
+        background: url(../pictures/raspored.jpg) center center;
+    }
+
+    .back {
+        opacity: 0.8;
+    }
+
+    .back a {
+        font-size: 20;
+        color: black;
+    }
+}
+
+.classes {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.back {
+    background: url(../pictures/title-background-1.jpg);
+    text-align: center;
+    border-radius: 9px;
+    height: 90px;
+}
+
+.back a {
+    text-decoration: none;
+    display: block;
+    height: 90px;
+    line-height: 90px;
+}
+
+.back a:hover,
+.back a:active,
+.back a:focus {
+    color: rgb(255, 0, 149);
+}
+
+@media only screen and (min-width: 750px) {
+    .schedule {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 750px){
+    .schedule {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.caption {
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 0, 149);
+}
+
+.schedule {
+    display: grid;
+    grid-gap: 20px;
+    padding: 15px;
+    background-color: white;
+}
+
+.schedule .day {
+    text-align: center;
+    border: solid;
+    border-radius: 9px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.day div {
+    font-size: 25px;
+}
+
+#mon-19 {
+    grid-row: 3;
+}
+
+#mon-21 {
+    grid-row: 4;
+}
+
+#thur-19 {
+    grid-row: 3;
+}
+
+#thur-21 {
+    grid-row: 4;
+}
+
+.schedule-ind {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.schedule-ind div {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.schedule-ind h1 {
+    color: rgb(255, 0, 149);
+    text-align: center;
+}
+
+.schedule-ind p {
+    font-family: 'Kavivanar', cursive;
+}
+
+.schedule-ind img {
+    width: 320px;
+}
+
+.ind-yoga-picture {
+    grid-row: 1/3;
+    grid-column: 2;
+    align-self: center;
+}
+
+.ind-yoga-txt {
+    grid-column: 1/2;
+    grid-row: 1;
+    align-self: end;
+}
+
+.ind-preg-txt {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.ind-med-picture {
+    grid-row: 3/4;
+    grid-column: 1;
+}
+
+.ind-med-txt {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.ind-rec-txt {
+    grid-row: 4;
+    grid-column: 1/3;
+}
+
+@media only screen and (max-width: 820px) {
+    .schedule-ind {
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+
+    .schedule-ind div {
+        width: 75%;
+        padding: 0;
+    }
+
+    .schedule-ind img {
+        display: none;
+    }
+    
+    .ind-yoga-picture {
+       grid-column: 1;
+       grid-row: 2;
+       background: url(../pictures/title-background-1.jpg);
+       align-self: auto;
+    }
+    
+    .ind-yoga-txt {
+        grid-row: 1;
+        grid-column: 1;
+        align-self: center;
+    }
+    
+    .ind-preg-txt {
+        grid-row: 3;
+        grid-column: 1;
+        align-self: center;
+    }
+    
+    .ind-med-picture {
+        grid-row: 4;
+        grid-column: 1;
+        background: url(../pictures/title-background-1.jpg);
+    }
+    
+    .ind-med-txt {
+        grid-row: 5;
+        grid-column: 1;
+    }
+    
+    .ind-rec-txt {
+        grid-row: 6;
+        grid-column: 1;
+    }
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background: white;
+}
+
+.contact {
+    padding: 50px;
+}
+
+.contact span {
+    color: rgb(255, 0, 149);
+    font-size: 50px;
+}
+
+.contact h1 {
+    text-align: center;
+}
+
+.mail {
+    font-family: 'Kavivanar', cursive;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.questions {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.questions h2 {
+    color: rgb(255, 0, 149);
+}
+
+.questions p {
+    font-family: 'Kavivanar', cursive;
+    text-align: justify;
+}
+
+#gallery {
+    background-color: white;
+}
+
+.gallery {
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.slide-show {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide-show img {
+    border-radius: 3px;
+    height: 500px;
+}
+
+.prev,
+.next {
+    margin: 10px;
+    position: relative;
+    top: 270px;
+    display: block;
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    color: gray;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #333;
+}
+
+.next {
+    float: right;
+}
+
+.prev {
+    float: left;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .slide-show .landscape {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-show .portrait {
+        height: 60%;
+        width: auto;
+    }
+
+    .prev,
+    .next {
+        top: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .slide-show {
+        width: 100%;
+    }
+    .slide-show .landscape {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-show .portrait {
+        height: 45%;
+        width: auto;
+    }
+
+    .prev,
+    .next {
+        padding: 0;
+        top: 130px;
+        margin: 3px;
+    }
+
+}
